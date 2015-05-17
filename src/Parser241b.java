@@ -1,5 +1,3 @@
-package compilers2;
-
 public class Parser241b implements Parser {
 	private void s(Integer level, Input input, StringBuilder output) throws Exception {
 		if (level < 0) {

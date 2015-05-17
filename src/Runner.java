@@ -1,8 +1,6 @@
-package compilers2;
-
 public class Runner {
 	public static void run(IO io, Parser parser) {
-		io.out("Enter an expression according to the grammar:\r\n" + parser.grammar() + "\r\n");
+		io.out("Press Ctrl+C or enter a blank line to exit.\r\n\r\nEnter an expression to parse according to the grammar:\r\n" + parser.grammar() + "\r\n");
 		while (true) {
 			io.out("> ");
 			String expression = io.in();

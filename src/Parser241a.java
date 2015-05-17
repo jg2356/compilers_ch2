@@ -1,5 +1,3 @@
-package compilers2;
-
 public class Parser241a implements Parser {
 	private void s(Integer level, Input input, StringBuilder output) throws Exception {
 		if (!input.hasNext()) {
