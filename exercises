@@ -1,3 +1,9 @@
+Author: Jose Gomez
+Nova Southeastern University
+May 17th 2015
+CISC 630
+
+
 2.2.1: Consider the context-free grammar:
 S -> S S + | S S * | a
 
@@ -65,5 +71,3 @@ Compile and run program: Parser241b.java
 
 c) 0 S 1 | 0 1
 Compile and run program: Parser241c.java
-
-
