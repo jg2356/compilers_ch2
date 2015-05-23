@@ -12,7 +12,6 @@ public class IO {
 	
 	public String in() {
 		return in.nextLine();
-		
 	}
 
 	public void out(String text) {

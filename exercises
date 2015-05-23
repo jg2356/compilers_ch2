@@ -63,11 +63,53 @@ factor -> {print(digit)} digit
         | ( expr )
 
 2.4.1: Construct recursive-descent parsers, starting with the following grammars:
+Program:
 a) S -> + S S | - S S | a
-Compile and run program: Parser241a.java
+
+void S() {
+  switch (lookAhead(1)) {
+    case "a":
+      matchToken("a");
+      break;
+    case "-":
+      matchToken("-");
+      S();
+      S();
+      break;
+    case "+":
+      matchToken("+");
+      S();
+      S();
+      break;
+    default:
+      error();
+  }
+}
 
 b) S -> S ( S ) S | e
-Compile and run program: Parser241b.java
+
+void S() {
+  switch (lookAhead(1)) {
+    case "(":
+      matchToken("(");
+      S();
+      matchToken(")");
+      S();
+      break;
+  }
+}
 
 c) 0 S 1 | 0 1
-Compile and run program: Parser241c.java
+
+void S() {
+  switch (lookAhead(1)) {
+    case "0":
+      matchToken("0");
+      S();
+      matchToken("1");
+    case "1"
+      break;
+    default:
+      error();
+  }
+}
